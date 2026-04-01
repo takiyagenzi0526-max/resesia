@@ -6,27 +6,24 @@
 <title>RESESIA｜不動産会社</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-      <form action="https://formsubmit.co/resesia.corporate@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="RESESIA website contact">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
+  :root {
+    --paper: #f8f5f0;
+    --light: #f1ece4;
     --ink: #1c1a17;
-          <div class="form-group"><label>縺雁錐蜑・*</label><input type="text" name="last_name" placeholder="螻ｱ逕ｰ 螟ｪ驛・ required></div>
-          <div class="form-group"><label>繝輔Μ繧ｬ繝・/label><input type="text" name="first_name" placeholder="繝､繝槭ム 繧ｿ繝ｭ繧ｦ"></div>
+    --gray: #6b6258;
+    --gold: #a5c771;
     --gold-light: #bfdc96;
-        <div class="form-group"><label>繝｡繝ｼ繝ｫ繧｢繝峨Ξ繧ｹ *</label><input type="email" name="email" placeholder="example@email.com" required></div>
-        <div class="form-group"><label>髮ｻ隧ｱ逡ｪ蜿ｷ</label><input type="tel" name="phone" placeholder="00-0000-0000"></div>
   }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
-          <select name="inquiry_type">
   body { background: var(--paper); color: var(--ink); font-family: 'Noto Sans JP', sans-serif; font-weight: 300; overflow-x: hidden; }
-            <option value="buy">荳榊虚逕｣螢ｲ雋ｷ縺ｫ縺､縺・※</option>
-            <option value="sell">雉・ｲｸ邂｡逅・↓縺､縺・※</option>
-            <option value="reform">繝ｪ繝輔か繝ｼ繝縺ｫ縺､縺・※</option>
-            <option value="other">縺昴・莉・/option>
+
+  nav {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+    backdrop-filter: blur(14px);
+    background: rgba(248,245,240,0.9);
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 60px; height: 70px;
-        <div class="form-group"><label>縺雁撫縺・粋繧上○蜀・ｮｹ *</label><textarea name="message" placeholder="縺碑ｳｪ蝠上・縺皮嶌隲・・螳ｹ繧偵＃險伜・縺上□縺輔＞" required></textarea></div>
     border-bottom: 1px solid rgba(165,199,113,0.2);
     transition: box-shadow 0.3s;
   }
@@ -53,7 +50,7 @@
   .btn-link::after { content: '→'; transition: transform 0.2s; }
   .btn-link:hover { color: var(--gold); }
   .btn-link:hover::after { transform: translateX(4px); }
-  .hero-visual { position: relative; overflow: hidden; background: linear-gradient(150deg, #2a2218 0%, #5a4530 60%, #8a6a40 100%); }
+  .hero-visual { position: relative; overflow: hidden; background: linear-gradient(150deg, #1f2a16 0%, #5f7c3f 60%, #a5c771 100%); }
   .hero-visual::after { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, rgba(165,199,113,0.04) 0px, rgba(165,199,113,0.04) 1px, transparent 1px, transparent 50px), repeating-linear-gradient(-45deg, rgba(165,199,113,0.04) 0px, rgba(165,199,113,0.04) 1px, transparent 1px, transparent 50px); }
   .hero-photo-placeholder { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 1; }
   .hero-photo-placeholder span { font-size: 0.7rem; letter-spacing: 0.2em; color: rgba(255,255,255,0.25); text-transform: uppercase; }
@@ -75,7 +72,7 @@
   #about .sec-title { color: var(--paper); }
   #about .sec-label { color: var(--gold-light); }
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-  .about-img { height: 480px; position: relative; background: linear-gradient(150deg, #3a2e20 0%, #6a5038 100%); display: flex; align-items: center; justify-content: center; }
+  .about-img { height: 480px; position: relative; background: linear-gradient(150deg, #26361c 0%, #6f9250 100%); display: flex; align-items: center; justify-content: center; }
   .about-img span { font-size: 0.7rem; letter-spacing: 0.2em; color: rgba(255,255,255,0.2); text-transform: uppercase; }
   .about-body { font-size: 0.88rem; line-height: 2.3; color: rgba(248,245,240,0.65); margin-top: 8px; }
   .about-table { margin-top: 36px; width: 100%; border-collapse: collapse; font-size: 0.82rem; }
@@ -95,13 +92,13 @@
   .service-no { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; color: rgba(165,199,113,0.15); line-height: 1; margin-bottom: 20px; display: block; }
   .service-name { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; font-weight: 400; letter-spacing: 0.06em; margin-bottom: 14px; }
   .service-desc { font-size: 0.8rem; line-height: 2; color: var(--gray); }
-  .service-img { margin-top: 28px; height: 120px; background: linear-gradient(135deg, var(--light) 0%, #ddd5c8 100%); display: flex; align-items: center; justify-content: center; }
+  .service-img { margin-top: 28px; height: 120px; background: linear-gradient(135deg, var(--light) 0%, #d8e6bf 100%); display: flex; align-items: center; justify-content: center; }
   .service-img span { font-size: 0.62rem; letter-spacing: 0.2em; color: rgba(120,110,100,0.4); text-transform: uppercase; }
 
   /* ACCESS */
   #access { background: var(--light); }
   .access-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
-  .access-map { height: 400px; background: linear-gradient(135deg, #d8d0c4 0%, #c8c0b4 100%); display: flex; align-items: center; justify-content: center; position: relative; }
+  .access-map { height: 400px; background: linear-gradient(135deg, #dce9c8 0%, #c2d7a2 100%); display: flex; align-items: center; justify-content: center; position: relative; }
   .access-map span { font-size: 0.7rem; letter-spacing: 0.2em; color: rgba(80,70,60,0.4); text-transform: uppercase; }
   .access-map-note { position: absolute; bottom: 16px; right: 16px; font-size: 0.65rem; letter-spacing: 0.1em; color: rgba(80,70,60,0.5); background: rgba(255,255,255,0.7); padding: 6px 12px; }
   .access-list { list-style: none; margin-top: 32px; }
@@ -125,13 +122,13 @@
   .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--gold); }
   .form-group textarea { resize: vertical; min-height: 140px; }
   .form-group select { appearance: none; cursor: pointer; }
-  .form-group select option { background: #2a2218; }
+  .form-group select option { background: #1f2a16; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .form-submit { width: 100%; padding: 18px; background: var(--gold); color: #fff; border: none; font-family: 'Noto Sans JP', sans-serif; font-size: 0.78rem; letter-spacing: 0.2em; cursor: pointer; transition: background 0.25s, transform 0.2s; }
   .form-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
 
   /* FOOTER */
-  footer { background: #111009; color: rgba(248,245,240,0.35); padding: 40px 60px; display: flex; justify-content: space-between; align-items: center; font-size: 0.7rem; letter-spacing: 0.1em; }
+  footer { background: #162010; color: rgba(248,245,240,0.35); padding: 40px 60px; display: flex; justify-content: space-between; align-items: center; font-size: 0.7rem; letter-spacing: 0.1em; }
   .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: rgba(248,245,240,0.6); }
   .footer-logo span { color: var(--gold); }
 

@@ -110,9 +110,9 @@ nav.primary-nav a.active {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-image: url('https://images.unsplash.com/photo-1549693578-d683be217e58?w=1920&q=80');
+  background-image: url('https://images.unsplash.com/photo-1590559899731-a382839e5549?w=1920&q=80');
   background-size: cover;
-  background-position: center;
+  background-position: center top;
 }
 
 .hero::before {
@@ -374,10 +374,28 @@ h1 {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .footer-row .logo {
   font-size: 1.4rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--brand-deep);
 }
 
 @media (max-width: 960px) {

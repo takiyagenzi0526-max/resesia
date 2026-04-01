@@ -338,6 +338,18 @@ h2 {
   box-shadow: 0 12px 24px rgba(117, 154, 63, 0.16);
 }
 
+.service-link {
+  display: block;
+  text-decoration: none;
+  height: 100%;
+}
+
+.service-link:focus-visible {
+  outline: 2px solid var(--brand-deep);
+  outline-offset: 5px;
+  border-radius: 12px;
+}
+
 .service-media {
   margin-bottom: 14px;
   border-radius: 10px;

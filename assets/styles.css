@@ -336,6 +336,21 @@ h2 {
   box-shadow: 0 14px 24px rgba(117, 154, 63, 0.14);
 }
 
+.service-media {
+  margin-bottom: 14px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(117, 154, 63, 0.42);
+  background: #fff;
+}
+
+.service-media img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
 .service-item .num {
   font-family: "Cormorant Garamond", serif;
   color: #4f6d26;

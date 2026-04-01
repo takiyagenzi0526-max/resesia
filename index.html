@@ -6,24 +6,27 @@
 <title>RESESIA｜不動産会社</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
+      <form action="https://formsubmit.co/resesia.corporate@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="RESESIA website contact">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
     --ink: #1c1a17;
-    --paper: #f8f5f0;
-    --gold: #a5c771;
+          <div class="form-group"><label>縺雁錐蜑・*</label><input type="text" name="last_name" placeholder="螻ｱ逕ｰ 螟ｪ驛・ required></div>
+          <div class="form-group"><label>繝輔Μ繧ｬ繝・/label><input type="text" name="first_name" placeholder="繝､繝槭ム 繧ｿ繝ｭ繧ｦ"></div>
     --gold-light: #bfdc96;
-    --gray: #7a7670;
-    --light: #eee9e0;
+        <div class="form-group"><label>繝｡繝ｼ繝ｫ繧｢繝峨Ξ繧ｹ *</label><input type="email" name="email" placeholder="example@email.com" required></div>
+        <div class="form-group"><label>髮ｻ隧ｱ逡ｪ蜿ｷ</label><input type="tel" name="phone" placeholder="00-0000-0000"></div>
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+          <select name="inquiry_type">
   body { background: var(--paper); color: var(--ink); font-family: 'Noto Sans JP', sans-serif; font-weight: 300; overflow-x: hidden; }
-
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            <option value="buy">荳榊虚逕｣螢ｲ雋ｷ縺ｫ縺､縺・※</option>
+            <option value="sell">雉・ｲｸ邂｡逅・↓縺､縺・※</option>
+            <option value="reform">繝ｪ繝輔か繝ｼ繝縺ｫ縺､縺・※</option>
+            <option value="other">縺昴・莉・/option>
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 60px; height: 70px;
-    background: rgba(248,245,240,0.95); backdrop-filter: blur(10px);
+        <div class="form-group"><label>縺雁撫縺・粋繧上○蜀・ｮｹ *</label><textarea name="message" placeholder="縺碑ｳｪ蝠上・縺皮嶌隲・・螳ｹ繧偵＃險伜・縺上□縺輔＞" required></textarea></div>
     border-bottom: 1px solid rgba(165,199,113,0.2);
     transition: box-shadow 0.3s;
   }
@@ -272,24 +275,27 @@
           <span class="contact-tel-label">Mobile: 080-2444-1872</span>
         </div>
       </div>
-      <form>
+      <form action="https://formsubmit.co/resesia.corporate@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="RESESIA website contact">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
         <div class="form-row">
-          <div class="form-group"><label>お名前 *</label><input type="text" placeholder="山田 太郎"></div>
-          <div class="form-group"><label>フリガナ</label><input type="text" placeholder="ヤマダ タロウ"></div>
+          <div class="form-group"><label>お名前 *</label><input type="text" name="name" placeholder="山田 太郎" required></div>
+          <div class="form-group"><label>フリガナ</label><input type="text" name="kana" placeholder="ヤマダ タロウ"></div>
         </div>
-        <div class="form-group"><label>メールアドレス *</label><input type="email" placeholder="example@email.com"></div>
-        <div class="form-group"><label>電話番号</label><input type="tel" placeholder="00-0000-0000"></div>
+        <div class="form-group"><label>メールアドレス *</label><input type="email" name="email" placeholder="example@email.com" required></div>
+        <div class="form-group"><label>電話番号</label><input type="tel" name="phone" placeholder="00-0000-0000"></div>
         <div class="form-group">
           <label>お問い合わせ種別</label>
-          <select>
+          <select name="inquiry_type">
             <option value="">選択してください</option>
-            <option>不動産売買について</option>
-            <option>賃貸管理について</option>
-            <option>リフォームについて</option>
-            <option>その他</option>
+            <option value="buy">不動産売買について</option>
+            <option value="rent">賃貸管理について</option>
+            <option value="reform">リフォームについて</option>
+            <option value="other">その他</option>
           </select>
         </div>
-        <div class="form-group"><label>お問い合わせ内容 *</label><textarea placeholder="ご質問・ご相談内容をご記入ください"></textarea></div>
+        <div class="form-group"><label>お問い合わせ内容 *</label><textarea name="message" placeholder="ご質問・ご相談内容をご記入ください" required></textarea></div>
         <button type="submit" class="form-submit">送信する</button>
       </form>
     </div>

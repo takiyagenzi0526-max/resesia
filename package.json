@@ -1,0 +1,9 @@
+{
+  "name": "resesia-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "RESESIA corporate website",
+  "dependencies": {
+    "nodemailer": "^6.10.1"
+  }
+}

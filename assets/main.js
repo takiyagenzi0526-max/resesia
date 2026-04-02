@@ -1,3 +1,13 @@
+/* ── Loading Screen ── */
+const loadingScreen = document.querySelector('.loading-screen');
+if (loadingScreen) {
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      loadingScreen.classList.add('is-hidden');
+    }, 800);
+  });
+}
+
 /* ── Mobile Menu ── */
 const menuToggle = document.querySelector('.menu-toggle');
 const primaryNav = document.querySelector('.primary-nav');
@@ -85,6 +95,24 @@ if (hero && heroSlidesContainer) {
     }
   });
 }
+
+/* ── FAQ Accordion ── */
+document.querySelectorAll('.faq-question').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('is-open');
+
+    item.closest('.faq-category').querySelectorAll('.faq-item.is-open').forEach((openItem) => {
+      openItem.classList.remove('is-open');
+      openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+
+    if (!isOpen) {
+      item.classList.add('is-open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
 
 /* ── Scroll Fade-In Animation ── */
 const fadeElements = document.querySelectorAll('.fade-in');

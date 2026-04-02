@@ -1,3 +1,46 @@
+/* ── Scroll Progress Bar ── */
+const scrollProgress = document.querySelector('.scroll-progress');
+if (scrollProgress) {
+  window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+    scrollProgress.style.width = scrolled + '%';
+  }, { passive: true });
+}
+
+/* ── Back to Top Button ── */
+const backToTop = document.querySelector('.back-to-top');
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      backToTop.classList.add('is-visible');
+    } else {
+      backToTop.classList.remove('is-visible');
+    }
+  }, { passive: true });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+/* ── Page Transition ── */
+const pageTransition = document.querySelector('.page-transition');
+if (pageTransition) {
+  document.querySelectorAll('a[href]').forEach((link) => {
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('tel:') || href.startsWith('mailto:') || href.startsWith('http') || link.getAttribute('target') === '_blank') return;
+
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      pageTransition.classList.add('is-active');
+      setTimeout(() => {
+        window.location.href = href;
+      }, 350);
+    });
+  });
+}
+
 /* ── Loading Screen ── */
 const loadingScreen = document.querySelector('.loading-screen');
 if (loadingScreen) {

@@ -3,6 +3,81 @@
    Warm Green / Pop & Friendly Design
    =================================== */
 
+/* ── Scroll Progress Bar ── */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-light), var(--accent));
+  z-index: 9998;
+  border-radius: 0 999px 999px 0;
+  transition: width 0.05s linear;
+  box-shadow: 0 0 8px rgba(94, 170, 62, 0.4);
+}
+
+/* ── Back to Top Button ── */
+
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 200;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(72, 148, 58, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.35s ease, background 0.2s ease;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--brand-deep);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(72, 148, 58, 0.4);
+}
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ── Page Transition ── */
+
+.page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 9997;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.page-transition.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 /* ── Loading Screen ── */
 
 .loading-screen {

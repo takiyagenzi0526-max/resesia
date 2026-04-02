@@ -1,9 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>会社概要 | RESESIA</title>
+  <meta name="description" content="株式会社RESESIAの会社概要。大阪を拠点に不動産売買・賃貸仲介、物件管理、投資・資産運用マネジメントを展開。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
@@ -18,6 +19,10 @@
         <img src="assets/resesia-mark.webp" class="logo-mark" alt="RESESIAロゴ">
         <span class="logo-text">RESESIA</span>
       </a>
+      <div class="header-info">
+        <a href="tel:06-7777-4801" class="header-tel">TEL 06-7777-4801</a>
+        <span class="header-hours">営業時間 9:00〜18:00（平日）</span>
+      </div>
       <button class="menu-toggle" type="button">MENU</button>
       <nav class="primary-nav">
         <ul>
@@ -31,17 +36,22 @@
   </header>
 
   <main>
+    <!-- ── Page Hero ── -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Company</span>
+        <h1>会社概要</h1>
+        <p>地域に根ざした信頼のパートナーとして、不動産に関するあらゆるニーズにお応えします。</p>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Company</span>
-          <h1>会社概要</h1>
-          <p>地域密着で安心できるパートナーを目指し、不動産の仲介、管理、売買、賃貸、斡旋から建築工事業及び住宅リフォーム工事業、Ｗｅｂマーケティング事業まで一気通貫で対応しています。</p>
-        </div>
-        <div class="grid-2">
+        <div class="grid-2 fade-in">
           <article class="card">
             <h3>ご挨拶</h3>
-            <p>RESESIAは、お客様のライフプランに寄り添う丁寧なご提案を大切にしています。物件のご紹介だけでなく、資金計画、税務、運用相談まで実務に基づくサポートを提供いたします。</p>
+            <p>RESESIAは、お客様のライフプランに寄り添う丁寧なご提案を大切にしています。物件のご紹介だけでなく、資金計画、税務、資産運用相談まで実務に基づくサポートを提供いたします。</p>
+            <p>不動産売買・賃貸仲介、物件管理、投資・資産運用マネジメントの3つの事業を柱に、お客様の資産価値の最大化に貢献してまいります。</p>
             <p>代表者を中心に、きめ細やかで分かりやすいコミュニケーションを徹底し、法人様・個人様を問わず安心してご相談いただける体制を整えています。</p>
           </article>
           <article class="card">
@@ -50,6 +60,7 @@
               <tr><th>会社名</th><td>株式会社RESESIA</td></tr>
               <tr><th>所在地</th><td>〒532-0011<br>大阪市淀川区西中島7-1-1興北ビル5階</td></tr>
               <tr><th>代表者</th><td>東野優</td></tr>
+              <tr><th>事業内容</th><td>不動産売買・賃貸仲介<br>物件管理<br>不動産投資・資産運用マネジメント</td></tr>
               <tr><th>免許番号</th><td>大阪府知事免許(1) 第0065101号</td></tr>
               <tr><th>Tel</th><td>06-7777-4801</td></tr>
               <tr><th>Mobile</th><td>080-2444-1872</td></tr>
@@ -59,25 +70,48 @@
         </div>
       </div>
     </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-banner">
+      <h2>どんなことでも、まずはご相談ください</h2>
+      <p>不動産に関するお悩み・ご質問、何でもお気軽にお問い合わせください。</p>
+      <a class="btn btn-primary btn-lg" href="contact.html">お問い合わせはこちら</a>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-row">
-      <a href="index.html" class="logo" aria-label="RESESIA ホーム">
-        <img src="assets/resesia-mark.webp" class="logo-mark" alt="RESESIAロゴ">
-        <span class="logo-text">RESESIA</span>
-      </a>
-      <nav class="footer-links">
-        <a href="privacy.html">プライバシーポリシー</a>
-      </nav>
-      <div>© 2026 RESESIA Co., Ltd. All Rights Reserved.<br>大阪府知事免許(1) 第0065101号</div>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="RESESIA ホーム">
+            <img src="assets/resesia-mark.webp" class="logo-mark" alt="RESESIAロゴ">
+            <span class="logo-text">RESESIA</span>
+          </a>
+          <p>大阪を拠点に、不動産売買・賃貸仲介、物件管理、投資・資産運用マネジメントを展開しています。</p>
+        </div>
+        <nav class="footer-nav">
+          <span class="footer-nav-title">Menu</span>
+          <a href="index.html">トップ</a>
+          <a href="services.html">サービス</a>
+          <a href="company.html">会社概要</a>
+          <a href="contact.html">お問い合わせ</a>
+        </nav>
+        <div class="footer-contact-info">
+          <div class="footer-phone">06-7777-4801</div>
+          <p>平日 9:00 - 18:00<br>〒532-0011<br>大阪市淀川区西中島7-1-1<br>興北ビル5階</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 RESESIA Co., Ltd. All Rights Reserved.</span>
+        <div>
+          <a href="privacy.html">プライバシーポリシー</a>
+          &ensp;|&ensp;
+          <span>大阪府知事免許(1) 第0065101号</span>
+        </div>
+      </div>
     </div>
   </footer>
 
   <script src="assets/main.js"></script>
 </body>
 </html>
-
-
-
-

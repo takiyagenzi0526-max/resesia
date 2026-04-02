@@ -1,3 +1,4 @@
+/* ── Mobile Menu ── */
 const menuToggle = document.querySelector('.menu-toggle');
 const primaryNav = document.querySelector('.primary-nav');
 
@@ -13,6 +14,19 @@ if (menuToggle && primaryNav) {
   });
 }
 
+/* ── Header Scroll Shadow ── */
+const header = document.querySelector('.site-header');
+if (header) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }, { passive: true });
+}
+
+/* ── Hero Slider ── */
 const hero = document.querySelector('.hero[data-hero-random="true"]');
 const heroSlidesContainer = document.querySelector('.hero-slides');
 
@@ -70,4 +84,23 @@ if (hero && heroSlidesContainer) {
       }, intervalMs);
     }
   });
+}
+
+/* ── Scroll Fade-In Animation ── */
+const fadeElements = document.querySelectorAll('.fade-in');
+
+if (fadeElements.length > 0) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  fadeElements.forEach((el) => observer.observe(el));
 }
